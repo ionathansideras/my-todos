@@ -51,6 +51,6 @@ function firstProjectToActive(projects) {
   // the every method will return true if all projects have data-active="false"
   if (projects.every((project) => project.active === false)) {
     // this will set the first project to active
-    projects[0].active = true;
+    projects[0] ? (projects[0].active = true) : null;
   }
 }

@@ -30,7 +30,7 @@ export function setProjects(data) {
 // this adds a submit event listener to the todo form
 document.querySelector(".todo-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  addTodo();
+  if (!e.target.classList.contains("edit")) addTodo();
 });
 // This adds a submit event listener to the project form
 document.querySelector(".project-form").addEventListener("submit", (e) => {

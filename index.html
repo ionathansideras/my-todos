@@ -9,7 +9,18 @@
     <aside></aside>
     <main></main>
     <form class="todo-form">
-      <input class="todo-input" type="text" placeholder="What needs to be done?" />
+      <label for="todo-name-input">Add a new todo</label>
+      <input id="todo-name-input" type="text" placeholder="What needs to be done?" />
+      <label for="todo-details-input">Additional Details</label>
+      <textarea id="todo-details-input" placeholder="Add any additional details here..."></textarea>
+      <label for="todo-deadline-input">Deadline</label>
+      <input id="todo-deadline-input" type="date" />
+      <label for="todo-priority-select">Priority</label>
+      <select id="todo-priority-select">
+        <option class="todo-priority-input" value="Not Important">Not Important</option>
+        <option class="todo-priority-input" value="Important">Important</option>
+        <option class="todo-priority-input" value="Very Important">Very Important</option>
+      </select>
       <button type="submit">Add</button>
     </form>
     <h1 class="title"></h1>

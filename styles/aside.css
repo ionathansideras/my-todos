@@ -15,3 +15,7 @@ aside {
     align-items: center;
     justify-items: center;
 }
+
+.edit-form {
+    visibility: hidden;
+}

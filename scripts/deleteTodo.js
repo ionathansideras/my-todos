@@ -11,6 +11,7 @@ export function deleteTodo(todoId, projectId) {
   // this filters the todos array and returns a new array without the deleted todo
   project.todos = project.todos.filter((todo) => todo.id !== todoId);
   // this renders the todo list to the DOM
+  document.querySelector(".todo-form").classList.remove("edit");
   renderTodo();
   // this saves the projects array to local storage
   saveToLocalStorage(projects);

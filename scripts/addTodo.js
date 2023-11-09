@@ -2,6 +2,7 @@ import { saveToLocalStorage } from "../helpers/manageStorage";
 import { getProjects } from "../main";
 import { v4 as uuidv4 } from "uuid";
 import { renderTodo } from "../helpers/renderTodoDom";
+import { setFromToEmpty } from "../helpers/setFormToEmpty";
 // this function will add a todo to the active project
 export function addTodo() {
   // this gets the projects array from main.js
@@ -10,18 +11,22 @@ export function addTodo() {
   const todo = {
     // this creates a unique id for the todo
     id: uuidv4(),
-    name: document.querySelector(".todo-input").value,
-    date: new Date().toLocaleDateString(),
+    name: document.querySelector("#todo-name-input").value,
+    details: document.querySelector("#todo-details-input").value,
+    priority: document.querySelector("#todo-priority-select").value,
+    deadline: document.querySelector("#todo-deadline-input").value,
   };
   // here we add the todo to the active project
   projects.forEach((project) => {
     if (project.active) {
+      console.log(project.todos);
       project.todos.push(todo);
     }
   });
   // this renders the todo list to the DOM
+  // this sets the form inputs to empty
   renderTodo();
-  console.log(projects);
   // this saves the projects array to local storage
   saveToLocalStorage();
+  setFromToEmpty();
 }
