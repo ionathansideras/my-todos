@@ -28,9 +28,7 @@ export function editTodo(todoId, projectId) {
   const todoDeadlineInput = document.querySelector("#todo-deadline-input");
   todoDeadlineInput.value = todo.deadline;
   // this is the function that handles the submit event
-  function handleEdit(e) {
-    // this prevents the form from submitting
-    e.preventDefault();
+  function handleEdit() {
     // this sets the todos name, details, priority, and deadline to the values from the form
     todo.name = todoNameInput.value;
     todo.details = todoDetailsInput.value;
