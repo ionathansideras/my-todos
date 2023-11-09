@@ -5,7 +5,7 @@ import { renderProjectsDom } from "./renderProjectDom";
 // and checks if the clicked project is the same as the project in the projects array
 // if it is the same it sets the active property to true and if it is not the same
 // it sets the active property to false
-export function handleActives(e) {
+export function setProjectToActive(e) {
   let projects = getProjects();
   projects.forEach((project) => {
     if (project.id === e.target.parentNode.dataset.id) {

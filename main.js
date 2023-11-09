@@ -1,7 +1,7 @@
 import { getLocalStorage, saveToLocalStorage } from "./helpers/manageStorage";
 import { addProject } from "./scripts/addProject";
 import { addTodo } from "./scripts/addTodo";
-import { handleActives } from "./helpers/handleActives";
+import { setProjectToActive } from "./helpers/setProjectToActive";
 import "./styles/aside.css";
 
 document.querySelector("aside").innerHTML = `
@@ -52,8 +52,8 @@ document.querySelector(".projects").addEventListener("click", (e) => {
   // so we can make sure that we are clicking on a project and not on
   // the delete button or the parent
   if (e.target.classList.contains("project-name")) {
-    // This calls the handleActives function and passes the event to it
-    handleActives(e);
+    // This calls the setProjectToActive function and passes the event to it
+    setProjectToActive(e);
     // This saves the projects array to local storage
     saveToLocalStorage(projects);
   }
