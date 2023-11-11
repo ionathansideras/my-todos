@@ -1,21 +1,177 @@
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+/* Global Styles */
 body {
-    margin: 0;
-    display: flex;
+  margin: 0;
+  display: flex;
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background-color: #202225;
 }
-aside {
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(191, 123, 255);
-    height: 100vh;
+
+/* Sidebar Styles */
+.aside {
+  width: 300px;
+  position: fixed;
+  display: flex;
+  left: -300px;
+  flex-direction: column;
+  align-items: center;
+  background-color: #40444b;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+  color: white;
 }
+
+.project-title {
+  margin: 0;
+}
+
+.aside:has(.menu-open) {
+  left: 0;
+}
+
+/* Sidebar Items Styles */
+.delete-project {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.projects {
+  overflow-y: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .projects > div {
-    display: flex;
-    align-items: center;
-    justify-items: center;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.project-name {
+  width: 150px;
+  padding: 3px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  border-radius: 3px;
+  color: rgb(197, 197, 197);
+  transition: all 0.2s ease-in-out;
+  overflow-wrap: break-word;
+}
+
+hr {
+  width: 90%;
+  margin: 30px 0;
+}
+
+.project-input {
+  width: 150px;
+  padding: 3px 10px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 3px;
+  color: rgb(0, 0, 0);
+  transition: all 0.3s ease-in-out;
+}
+
+.project-add {
+  padding: 3px 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  background-color: #f487d9;
+  color: rgb(255, 255, 255);
+  transition: all 0.2s ease-in-out;
+}
+
+.project-add:hover {
+  background-color: #ffafe7;
+}
+
+.projects > div[data-active="false"] > h2:hover {
+  background-color: #686868;
+  color: white;
 }
 
 .edit-form {
-    visibility: hidden;
+  visibility: hidden;
+}
+
+[data-active="true"] > h2 {
+  /* Your styles here */
+  background-color: #f487d9;
+  color: white;
+}
+
+[data-active="true"] > h2:hover {
+  background-color: #ffafe7;
+}
+
+/* Cover Styles */
+.cover-visible {
+  visibility: visible;
+  position: fixed;
+  opacity: 0.5;
+  background-color: rgb(176, 176, 176);
+  width: 100%;
+  height: 100vh;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 20px;
+  right: -45px;
+  cursor: pointer;
+  padding: 10px 15px;
+  background-color: #40444b;
+  border-radius: 0 20px 20px 0;
+  height: 30px;
+}
+
+.bar {
+  width: 23px;
+  height: 3px;
+  background-color: #fefefe;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+
+.menu-toggle:hover .bar {
+  background-color: #f487d9;
+}
+
+.menu-toggle:hover .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 7.6px);
+}
+
+.menu-toggle:hover .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle:hover .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -7.6px);
+}
+
+.menu-toggle.menu-open .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 7.6px);
+  background-color: #f487d9;
+}
+
+.menu-toggle.menu-open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.menu-open .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -7.6px);
+  background-color: #f487d9;
 }

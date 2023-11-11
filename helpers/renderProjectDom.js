@@ -1,6 +1,7 @@
 import { deleteProject } from "../scripts/deleteProject";
 import { getProjects } from "../main";
 import { renderTodo } from "./renderTodoDom";
+import trash from "../imgs/trash.png";
 // This function renders the projects to the DOM
 export function renderProjectsDom() {
   // this is a reference to the projects array
@@ -17,9 +18,9 @@ export function renderProjectsDom() {
     projectContainer.setAttribute("data-id", project.id);
     const projectName = document.createElement("h2");
     projectName.classList.add("project-name");
-    const projectDelete = document.createElement("button");
-    projectDelete.classList.add("delete");
-    projectDelete.textContent = "Delete";
+    const projectDelete = document.createElement("img");
+    projectDelete.classList.add("delete-project");
+    projectDelete.src = trash;
     // This calls the makeProjectActive function and passes the project to it
     makeProjectActive(project, projectContainer);
     // This adds an event listener to the delete button so when it is clicked it calls the

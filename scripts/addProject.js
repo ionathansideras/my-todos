@@ -13,10 +13,24 @@ export function addProject() {
     todos: [],
     active: false,
   };
+
   // this clears the input field
   input.value = "";
   // pushes the project to the projects array
   projects.push(project);
   // renders the projects to the DOM
   renderProjectsDom();
+}
+
+function validateInput(input) {
+  input.addEventListener("input", (e) => {
+    // Define a regular expression to match any non-whitespace character
+    const regex = /\S/;
+    if (!regex.test(input)) {
+      console.log("Invalid input!");
+      input.style.outlineColor = "red";
+    } else {
+      input.setCustomValidity("");
+    }
+  });
 }

@@ -24,7 +24,7 @@ export function renderTodo() {
     todoName.textContent = todo.name;
     // creates the div for the todo delete button
     const todoDelete = document.createElement("button");
-    todoDelete.classList.add("delete");
+    todoDelete.classList.add("delete-todo");
     todoDelete.textContent = "Delete";
     // this adds an event listener to the delete button
     todoDelete.addEventListener("click", () => {
