@@ -56,7 +56,6 @@ document.querySelector("aside").addEventListener("click", (e) => {
   }
   // when we click the aside-hide button we want to hide the aside
   if (e.target.id === "mobile-menu" || e.target.classList.contains("bar")) {
-    console.log(e.target);
     showHideAside();
   }
 });
