@@ -1,0 +1,78 @@
+.todo-form {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  z-index: 100;
+  background-color: #585b60;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 250px;
+  padding: 20px;
+  border: 1px solid #878787;
+  border-radius: 6px;
+  top: -300px;
+  right: 50%;
+  transform: translate(50%, -50%);
+  transition: all 0.5s ease-in-out;
+  color: white;
+  font-size: 20px;
+}
+
+.todo-form-end {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+label {
+  margin-top: 15px;
+}
+#todo-name-input {
+  width: 237px;
+}
+.todo-form input {
+  height: 20px;
+}
+.todo-form select {
+  height: 24px;
+}
+
+.todo-form-end > div {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-todo {
+  width: 100%;
+  height: 30px;
+  background-color: #0078d7;
+  border: none;
+  color: white;
+  border-radius: 3px;
+  font-size: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.hide-todo-form {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  cursor: pointer;
+}
+
+.todo-form-visible {
+  top: 50%;
+}
+
+#todo-details-input {
+  max-width: 240px;
+  min-width: 240px;
+  max-height: 50vh;
+  min-height: 70px;
+}

@@ -27,8 +27,10 @@
       <h1 class="project-title">Choose your Project</h1>
       <div class="projects"></div>
     </aside>
+    <button class="open-todo-form">Add Todo</button>
     <main></main>
     <form class="todo-form">
+      <img src="/imgs/hide.png" alt="hide" class="hide-todo-form" />
       <label for="todo-name-input">Add a new todo</label>
       <input
         id="todo-name-input"
@@ -40,19 +42,28 @@
         id="todo-details-input"
         placeholder="Add any additional details here..."
       ></textarea>
-      <label for="todo-deadline-input">Deadline</label>
-      <input id="todo-deadline-input" type="date" />
-      <label for="todo-priority-select">Priority</label>
-      <select id="todo-priority-select">
-        <option class="todo-priority-input" value="Not Important">
-          Not Important
-        </option>
-        <option class="todo-priority-input" value="Important">Important</option>
-        <option class="todo-priority-input" value="Very Important">
-          Very Important
-        </option>
-      </select>
-      <button type="submit">Add</button>
+      <div class="todo-form-end">
+        <div>
+          <label for="todo-deadline-input">Deadline</label>
+          <input id="todo-deadline-input" type="date" />
+        </div>
+        <div>
+          <label for="todo-priority-input">Priority</label>
+          <select id="todo-priority-input">
+            <option class="todo-priority-input" value="Not Important">
+              Not Important
+            </option>
+            <option class="todo-priority-input" value="Important">
+              Important
+            </option>
+            <option class="todo-priority-input" value="Very Important">
+              Very Important
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <button class="add-todo" type="submit">Add</button>
     </form>
     <h1 class="title"></h1>
     <script type="module" src="/main.js"></script>

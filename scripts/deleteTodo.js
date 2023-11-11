@@ -1,6 +1,7 @@
 import { getProjects } from "../main";
 import { renderTodo } from "../helpers/renderTodoDom.js";
 import { saveToLocalStorage } from "../helpers/manageStorage.js";
+import { hideTodoForm } from "../helpers/showHideTodoForm.js";
 // this function is going to delete a todo from the list
 // based on the todo id and the project id
 export function deleteTodo(todoId, projectId) {
@@ -11,7 +12,7 @@ export function deleteTodo(todoId, projectId) {
   // this filters the todos array and returns a new array without the deleted todo
   project.todos = project.todos.filter((todo) => todo.id !== todoId);
   // this renders the todo list to the DOM
-  document.querySelector(".todo-form").classList.remove("edit");
+  hideTodoForm();
   renderTodo();
   // this saves the projects array to local storage
   saveToLocalStorage(projects);

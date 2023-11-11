@@ -23,7 +23,7 @@ export function editTodo(todoId, projectId) {
   todoNameInput.value = todo.name;
   const todoDetailsInput = document.querySelector("#todo-details-input");
   todoDetailsInput.value = todo.details;
-  const todoPriorityInput = document.querySelector("#todo-priority-select");
+  const todoPriorityInput = document.querySelector("#todo-priority-input");
   todoPriorityInput.value = todo.priority;
   const todoDeadlineInput = document.querySelector("#todo-deadline-input");
   todoDeadlineInput.value = todo.deadline;

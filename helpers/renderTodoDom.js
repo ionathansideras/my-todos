@@ -1,6 +1,8 @@
 import { getProjects } from "../main";
 import { deleteTodo } from "../scripts/deleteTodo";
 import { editTodo } from "../scripts/editTodo";
+import { showCover } from "./showHideCover";
+import { showTodoForm } from "./showHideTodoForm";
 // this function will render the todo list to the DOM
 // based on the active project
 export function renderTodo() {
@@ -38,6 +40,8 @@ export function renderTodo() {
     // this adds an event listener to the edit button
     todoEdit.addEventListener("click", () => {
       // this calls the editTodo function and passes the todo id to it
+      showTodoForm();
+      showCover(50);
       editTodo(todo.id, activeProject.id);
     });
     // creates the div for deadline

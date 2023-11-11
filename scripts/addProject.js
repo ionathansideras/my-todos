@@ -21,16 +21,3 @@ export function addProject() {
   // renders the projects to the DOM
   renderProjectsDom();
 }
-
-function validateInput(input) {
-  input.addEventListener("input", (e) => {
-    // Define a regular expression to match any non-whitespace character
-    const regex = /\S/;
-    if (!regex.test(input)) {
-      console.log("Invalid input!");
-      input.style.outlineColor = "red";
-    } else {
-      input.setCustomValidity("");
-    }
-  });
-}

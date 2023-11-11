@@ -4,7 +4,10 @@ import { addTodo } from "./scripts/addTodo";
 import { setProjectToActive } from "./helpers/setProjectToActive";
 import { showHideAside } from "./helpers/showHideAside";
 import { validateProject } from "./scripts/validateProject";
+import { showTodoForm, hideTodoForm } from "./helpers/showHideTodoForm";
+import { showCover, hideCover } from "./helpers/showHideCover";
 import "./styles/aside.css";
+import "./styles/todo-form.css";
 // This is the projects array that will hold all the projects
 let projects = [];
 // This is a flag that will be used to check if the project input is valid or not
@@ -32,6 +35,8 @@ document.querySelector(".todo-form").addEventListener("submit", (e) => {
   // This checks if the clicked element has the edit class
   // because we want to use the addTodo function only when we are not editing a todo
   if (!e.target.classList.contains("edit")) addTodo();
+  hideTodoForm();
+  hideCover();
 });
 // This adds a click event listener to the aside
 // by using event delegation we can add a click event listener to the parent element
@@ -73,4 +78,24 @@ document.querySelector(".project-form").addEventListener("submit", (e) => {
     // This saves the projects array to local storage
     saveToLocalStorage(projects);
   }
+});
+// This adds a click event listener to the open todo form button
+document.querySelector(".open-todo-form").addEventListener("click", () => {
+  // we show the cover and the todo form
+  showCover(50);
+  showTodoForm();
+});
+// This adds a click event listener to the hide todo form button
+document.querySelector(".hide-todo-form").addEventListener("click", () => {
+  // we hide the cover and the todo form
+  hideCover();
+  hideTodoForm();
+});
+
+// This adds a click event listener to the cover
+document.querySelector(".cover").addEventListener("click", () => {
+  // and when we click the cover we want to hide the aside and the cover and the todo form
+  hideCover();
+  hideTodoForm();
+  document.querySelector(".menu-open")?.classList?.remove("menu-open");
 });

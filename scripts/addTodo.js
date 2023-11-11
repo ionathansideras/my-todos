@@ -10,7 +10,7 @@ export function getTodoInputValues() {
   const todoDetails = document
     .querySelector("#todo-details-input")
     .value.trim();
-  const todoPriority = document.querySelector("#todo-priority-select").value;
+  const todoPriority = document.querySelector("#todo-priority-input").value;
   const todoDeadline = document
     .querySelector("#todo-deadline-input")
     .value.trim();
