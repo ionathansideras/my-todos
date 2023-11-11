@@ -10,10 +10,6 @@ import "./styles/aside.css";
 let projects = [];
 // This is a flag that will be used to check if the project input is valid or not
 let projectFlag = false;
-// This is a getter for the projectFlag variable with this way of writing it
-export function getProjectFlag() {
-  return projectFlag;
-}
 // this gets the projects array from local storage and assigns it to the projects variable
 // if there is no projects array in local storage it will create one
 getLocalStorage();

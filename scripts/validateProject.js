@@ -1,7 +1,6 @@
-import { getProjectFlag, setProjectFlag } from "../main.js";
+import { setProjectFlag } from "../main.js";
 // this validates the input field for the project name
 export function validateProject(e) {
-  let flag = getProjectFlag();
   // Define a regular expression to match any non-whitespace character
   const regex = /\S/;
   if (!regex.test(e.target.value)) {
