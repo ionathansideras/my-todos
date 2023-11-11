@@ -5,7 +5,6 @@ import { setProjectToActive } from "./helpers/setProjectToActive";
 import { showHideAside } from "./helpers/showHideAside";
 import { validateProject } from "./scripts/validateProject";
 import "./styles/aside.css";
-
 // This is the projects array that will hold all the projects
 let projects = [];
 // This is a flag that will be used to check if the project input is valid or not
