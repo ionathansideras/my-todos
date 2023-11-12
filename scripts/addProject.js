@@ -13,7 +13,6 @@ export function addProject() {
     todos: [],
     active: false,
   };
-
   // this clears the input field
   input.value = "";
   // pushes the project to the projects array

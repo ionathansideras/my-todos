@@ -1,15 +1,23 @@
+// Import necessary function
 import { setProjectFlag } from "../main.js";
-// this validates the input field for the project name
+
+// Function to validate the input field for the project name
 export function validateProject(e) {
   // Define a regular expression to match any non-whitespace character
   const regex = /\S/;
+
+  // Check if the input value contains any non-whitespace character
   if (!regex.test(e.target.value)) {
+    // Set outline color to red if validation fails
     e.target.style.outlineColor = "red";
-    // this sets the projectFlag to false so we can't submit the form
+
+    // Set projectFlag to false to indicate invalid input
     setProjectFlag(false);
   } else {
+    // Set outline color to green if validation passes
     e.target.style.outlineColor = "green";
-    // this sets the projectFlag to true so we can submit the form
+
+    // Set projectFlag to true to indicate valid input
     setProjectFlag(true);
   }
 }

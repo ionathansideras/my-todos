@@ -36,7 +36,6 @@ export function addTodo() {
   // here we add the todo to the active project
   projects.forEach((project) => {
     if (project.active) {
-      console.log(project.todos);
       project.todos.push(todo);
     }
   });
@@ -45,5 +44,6 @@ export function addTodo() {
   renderTodo();
   // this saves the projects array to local storage
   saveToLocalStorage();
+  // this sets the form inputs to empty
   setFromToEmpty();
 }

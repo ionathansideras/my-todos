@@ -1,0 +1,104 @@
+/* Main container styling */
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+/* Todo item styling */
+.todo {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+/* Todo container styling */
+.todo-div {
+  display: flex;
+  flex-direction: column;
+  width: 230px;
+  height: 150px;
+  justify-content: space-between;
+  background-color: #202225;
+  padding: 15px;
+  border-radius: 6px;
+  position: relative;
+}
+
+/* Container for todo buttons */
+.todo-buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* Delete todo button styling */
+.delete-todo {
+  position: absolute;
+  top: 18px;
+  right: 15px;
+  cursor: pointer;
+}
+
+/* Priority indicator styling */
+.todo-div > span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 10px;
+  border-radius: 6px 0 0 6px;
+}
+
+/* Priority classes styling */
+.important {
+  background-color: rgb(255, 153, 70);
+}
+
+.not-important {
+  background-color: rgb(70, 255, 70);
+}
+
+.very-important {
+  background-color: rgb(255, 70, 70);
+}
+
+/* Todo details styling */
+.todo-name,
+.todo-priority,
+.todo-details,
+.todo-deadline {
+  margin: 0;
+}
+
+.todo-name {
+  width: 190px;
+  padding-left: 10px;
+}
+
+.todo-details {
+  width: 95%;
+  padding-left: 10px;
+  overflow-wrap: break-word;
+}
+
+/* Edit button styling */
+#edit {
+  padding: 3px 15px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  background-color: #0078d7;
+  transition: all 0.3s ease-in-out;
+}
+
+#edit:hover {
+  background-color: #3192e1;
+}
+
+/* Todo deadline container styling */
+.todo-deadline {
+  display: flex;
+  align-items: center;
+}
