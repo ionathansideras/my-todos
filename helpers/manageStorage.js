@@ -32,7 +32,7 @@ function getDefaultProjectData() {
           id: "1",
           name: "Welcome",
           details:
-            "In this website you can create projects and add todo's to them, so you can keep track of your tasks.",
+            "Hello there! In this website you can create projects and add todo's to them, enjoy!",
           priority: "Not Important",
           deadline:
             new Date().getDate() +
