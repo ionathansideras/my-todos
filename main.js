@@ -109,6 +109,8 @@ document.querySelector(".project-form").addEventListener("submit", (e) => {
     // Save the projects array to local storage
     saveToLocalStorage(projects);
   }
+  const project = document.querySelector(".project-input");
+  validateProject(project);
 });
 
 // Add click event listener to open todo form button
