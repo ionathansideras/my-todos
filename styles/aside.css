@@ -169,4 +169,5 @@ hr {
   position: absolute;
   top: 95px;
   right: 95px;
+  transition: all 0.2s ease-in-out;
 }
