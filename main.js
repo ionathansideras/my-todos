@@ -109,6 +109,7 @@ document.querySelector(".project-form").addEventListener("submit", (e) => {
     // Save the projects array to local storage
     saveToLocalStorage(projects);
   }
+  // validate project after adding it
   const project = document.querySelector(".project-input");
   validateProject(project);
 });
