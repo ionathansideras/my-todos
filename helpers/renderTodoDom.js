@@ -29,6 +29,7 @@ export function renderTodo() {
     const todoContainer = document.createElement("section");
     todoContainer.classList.add("todo");
 
+    // Create the main div for the todo
     const todoDiv = document.createElement("div");
     todoDiv.classList.add("todo-div");
 
@@ -64,6 +65,8 @@ export function renderTodo() {
         projectId: activeProject.id,
       });
       setFormValues(todo);
+
+      // Validate input using the nameInput and detailsInput functions
       const name = document.querySelector("#todo-name-input");
       const details = document.querySelector("#todo-details-input");
       nameInput(name);
@@ -84,6 +87,7 @@ export function renderTodo() {
     todoDetails.classList.add("todo-details");
     todoDetails.textContent = todo.details;
 
+    // Create the span for priority color
     const priorityColor = document.createElement("span");
     const priorityClass = todo.priority.toLowerCase().replace(" ", "-");
     priorityColor.classList.add(priorityClass);

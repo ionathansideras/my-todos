@@ -1,16 +1,20 @@
+// Import necessary functions
 import { setTodoNameFlag, setTodoDetailsFlag } from "../main";
+
 // Function to validate the input field for the project name
 export function validateTodo(e) {
-  // Define a regular expression to match any non-whitespace character
-  if (e.target.id == "todo-name-input") {
+  // Check the target ID to determine which input is being validated
+  if (e.target.id === "todo-name-input") {
     nameInput(e.target);
-  } else if (e.target.id == "todo-details-input") {
+  } else if (e.target.id === "todo-details-input") {
     detailsInput(e.target);
   }
 }
 
+// Function to validate the name input
 export function nameInput(e) {
   const regex = /\S/;
+
   // Check if the input value contains any non-whitespace character
   if (!regex.test(e.value) || e.value.length > 18) {
     // Set outline color to red if validation fails
@@ -31,8 +35,10 @@ export function nameInput(e) {
   }
 }
 
+// Function to validate the details input
 export function detailsInput(e) {
   const regex = /\S/;
+
   // Check if the input value contains any non-whitespace character
   if (!regex.test(e.value) || e.value.length > 100) {
     // Set outline color to red if validation fails

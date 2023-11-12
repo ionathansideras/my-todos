@@ -18,12 +18,15 @@ export function renderProjectsDom() {
 
   // Loop through the projects array and create a div for each project
   projects.forEach((project) => {
+    // Create a container for the project
     const projectContainer = document.createElement("div");
     projectContainer.setAttribute("data-id", project.id);
 
+    // Create an element for the project name
     const projectName = document.createElement("h2");
     projectName.classList.add("project-name");
 
+    // Create an element for the delete button
     const projectDelete = document.createElement("img");
     projectDelete.classList.add("delete-project");
     projectDelete.src = trash;
@@ -37,9 +40,14 @@ export function renderProjectsDom() {
       deleteProject(project.id);
     });
 
+    // Set the project name text content
     projectName.textContent = project.name;
+
+    // Append elements to the project container
     projectContainer.appendChild(projectName);
     projectContainer.appendChild(projectDelete);
+
+    // Append the project container to the projects UI
     projectsUi.appendChild(projectContainer);
   });
 
