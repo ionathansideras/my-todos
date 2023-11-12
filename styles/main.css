@@ -75,6 +75,7 @@ main {
 .todo-name {
   width: 190px;
   padding-left: 10px;
+  overflow-wrap: break-word;
 }
 
 .todo-details {

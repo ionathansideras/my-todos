@@ -16,12 +16,12 @@ export function nameInput(e) {
   const regex = /\S/;
 
   // Check if the input value contains any non-whitespace character
-  if (!regex.test(e.value) || e.value.length > 18) {
+  if (!regex.test(e.value) || e.value.length > 15) {
     // Set outline color to red if validation fails
     e.style.outlineColor = "rgb(255, 70, 70)";
     document.querySelector(
       ".name-range"
-    ).textContent = `${e.value.length} / 18`;
+    ).textContent = `${e.value.length} / 15`;
     document.querySelector(".name-range").style.color = "rgb(255, 70, 70)";
     setTodoNameFlag(false);
   } else {
@@ -29,7 +29,7 @@ export function nameInput(e) {
     e.style.outlineColor = "rgb(70, 255, 70)";
     document.querySelector(
       ".name-range"
-    ).textContent = `${e.value.length} / 18`;
+    ).textContent = `${e.value.length} / 15`;
     document.querySelector(".name-range").style.color = "rgb(70, 255, 70)";
     setTodoNameFlag(true);
   }
@@ -40,12 +40,12 @@ export function detailsInput(e) {
   const regex = /\S/;
 
   // Check if the input value contains any non-whitespace character
-  if (!regex.test(e.value) || e.value.length > 100) {
+  if (!regex.test(e.value) || e.value.length > 50) {
     // Set outline color to red if validation fails
     e.style.outlineColor = "rgb(255, 70, 70)";
     document.querySelector(
       ".details-range"
-    ).textContent = `${e.value.length} / 100`;
+    ).textContent = `${e.value.length} / 50`;
     document.querySelector(".details-range").style.color = "rgb(255, 70, 70)";
     setTodoDetailsFlag(false);
   } else {
@@ -53,7 +53,7 @@ export function detailsInput(e) {
     e.style.outlineColor = "rgb(70, 255, 70)";
     document.querySelector(
       ".details-range"
-    ).textContent = `${e.value.length} / 100`;
+    ).textContent = `${e.value.length} / 50`;
     document.querySelector(".details-range").style.color = "rgb(70, 255, 70)";
     setTodoDetailsFlag(true);
   }
