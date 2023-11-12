@@ -7,6 +7,9 @@
     <link rel="icon" href="/imgs/todo-icon.png" type="theme-icon" />
   </head>
   <body>
+    <header>
+      <button class="open-todo-form">Add Todo +</button>
+    </header>
     <div class="cover"></div>
     <aside class="aside">
       <div class="menu-toggle" id="mobile-menu">
@@ -21,13 +24,13 @@
           type="text"
           placeholder="Project name..."
         />
+        <span class="project-range"></span>
         <button class="project-add" type="submit">Add</button>
       </form>
       <hr />
       <h1 class="project-title">Choose your Project</h1>
       <nav class="projects"></nav>
     </aside>
-    <button class="open-todo-form">Add Todo</button>
     <main></main>
     <form class="todo-form">
       <img src="/imgs/hide.png" alt="hide" class="hide-todo-form" />
@@ -37,11 +40,13 @@
         type="text"
         placeholder="What needs to be done?"
       />
+      <span class="name-range"></span>
       <label for="todo-details-input">Additional Details</label>
       <textarea
         id="todo-details-input"
         placeholder="Add any additional details here..."
       ></textarea>
+      <span class="details-range"></span>
       <div class="todo-form-end">
         <div>
           <label for="todo-deadline-input">Deadline</label>
@@ -62,7 +67,6 @@
           </select>
         </div>
       </div>
-
       <button class="add-todo" type="submit">Add</button>
     </form>
     <h1 class="title"></h1>

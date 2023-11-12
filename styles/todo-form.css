@@ -73,6 +73,19 @@ label {
 #todo-details-input {
   max-width: 240px;
   min-width: 240px;
-  max-height: 50vh;
+  max-height: 70px;
   min-height: 70px;
+}
+
+.name-range {
+  position: absolute;
+  font-size: 13px;
+  top: 90px;
+  right: 25px;
+}
+.details-range {
+  position: absolute;
+  font-size: 13px;
+  top: 205px;
+  right: 25px;
 }

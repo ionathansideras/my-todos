@@ -9,11 +9,14 @@ import { validateProject } from "./scripts/validateProject";
 import { showTodoForm, hideTodoForm } from "./helpers/showHideTodoForm";
 import { showCover, hideCover } from "./helpers/showHideCover";
 import { setFromToEmpty } from "./helpers/setFormToEmpty";
-
+import { renderProjectsDom } from "./helpers/renderProjectDom";
+import { detailsInput, nameInput } from "./scripts/validateTodo";
 // Import styles
 import "./styles/main.css";
 import "./styles/aside.css";
 import "./styles/todo-form.css";
+import "./styles/header.css";
+import { validateTodo } from "./scripts/validateTodo";
 
 // Projects array to hold all projects
 let projects = [];
@@ -31,10 +34,11 @@ export function setEditIds(data) {
 
 // Flag to check if the project input is valid
 let projectFlag = false;
-
+let todoNameFlag = false;
+let todoDetailsFlag = false;
 // Get projects array from local storage and assign it to the projects variable
 getLocalStorage();
-
+renderProjectsDom();
 // Getter for projects array
 export function getProjects() {
   return projects;
@@ -49,20 +53,28 @@ export function setProjects(data) {
 export function setProjectFlag(data) {
   projectFlag = data;
 }
+export function setTodoNameFlag(data) {
+  todoNameFlag = data;
+}
+export function setTodoDetailsFlag(data) {
+  todoDetailsFlag = data;
+}
 
 // Add submit event listener to the todo form
 document.querySelector(".todo-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  if (!e.target.classList.contains("edit")) {
-    // Adding a new todo
-    addTodo();
-  } else {
-    // Editing an existing todo
-    editTodo(editIds.todoId, editIds.projectId);
+  if (todoNameFlag && todoDetailsFlag) {
+    if (!e.target.classList.contains("edit")) {
+      // Adding a new todo
+      addTodo();
+    } else {
+      // Editing an existing todo
+      editTodo(editIds.todoId, editIds.projectId);
+    }
+    // Hide the todo form and cover
+    hideTodoForm();
+    hideCover();
   }
-  // Hide the todo form and cover
-  hideTodoForm();
-  hideCover();
 });
 
 // Add click event listener to the aside
@@ -81,10 +93,10 @@ document.querySelector("aside").addEventListener("click", (e) => {
 
 // Add focus and input event listener to the project input to validate input
 document.querySelector(".project-input").addEventListener("focus", (e) => {
-  validateProject(e);
+  validateProject(e.target);
 });
 document.querySelector(".project-input").addEventListener("input", (e) => {
-  validateProject(e);
+  validateProject(e.target);
 });
 
 // Add submit event listener to the project form
@@ -105,6 +117,10 @@ document.querySelector(".open-todo-form").addEventListener("click", () => {
   setFromToEmpty();
   showCover(50);
   showTodoForm();
+  const name = document.querySelector("#todo-name-input");
+  const details = document.querySelector("#todo-details-input");
+  nameInput(name);
+  detailsInput(details);
 });
 
 // Add click event listener to hide todo form button
@@ -122,4 +138,16 @@ document.querySelector(".cover").addEventListener("click", () => {
   hideTodoForm();
   document.querySelector(".edit")?.classList?.remove("edit");
   document.querySelector(".menu-open")?.classList?.remove("menu-open");
+});
+
+const inputName = document.querySelector("#todo-name-input");
+const inputDetails = document.querySelector("#todo-details-input");
+const inputsForValidation = [inputName, inputDetails];
+inputsForValidation.forEach((input) => {
+  input.addEventListener("focus", (e) => {
+    validateTodo(e);
+  });
+  input.addEventListener("input", (e) => {
+    validateTodo(e);
+  });
 });

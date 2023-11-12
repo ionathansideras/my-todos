@@ -1,0 +1,21 @@
+header {
+  height: 70px;
+  background-color: #2f3135;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.open-todo-form {
+  border: none;
+  border-radius: 6px;
+  color: white;
+  padding: 10px 28px;
+  font-size: 15px;
+  cursor: pointer;
+  background-color: #202225;
+  transition: all 0.3s ease-in-out;
+}
+.open-todo-form:hover {
+  background-color: #4e4e50;
+}

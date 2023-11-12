@@ -5,6 +5,8 @@ import { showCover } from "./showHideCover";
 import { showTodoForm } from "./showHideTodoForm";
 import { setFormValues } from "./setFormValues";
 import deleteImg from "../imgs/trash.png";
+import editSrc from "../imgs/edit.svg";
+import { nameInput, detailsInput } from "../scripts/validateTodo";
 
 // Function to render the todo list to the DOM based on the active project
 export function renderTodo() {
@@ -62,12 +64,20 @@ export function renderTodo() {
         projectId: activeProject.id,
       });
       setFormValues(todo);
+      const name = document.querySelector("#todo-name-input");
+      const details = document.querySelector("#todo-details-input");
+      nameInput(name);
+      detailsInput(details);
     });
 
     // Create the div for deadline
     const todoDeadline = document.createElement("p");
     todoDeadline.classList.add("todo-deadline");
     todoDeadline.textContent = todo.deadline;
+
+    // Create the edit icon
+    const editImg = document.createElement("img");
+    editImg.src = editSrc;
 
     // Create the div for details
     const todoDetails = document.createElement("p");
@@ -77,6 +87,9 @@ export function renderTodo() {
     const priorityColor = document.createElement("span");
     const priorityClass = todo.priority.toLowerCase().replace(" ", "-");
     priorityColor.classList.add(priorityClass);
+
+    // Add the edit icon to the edit button
+    todoEdit.appendChild(editImg);
 
     // Create the container for todo buttons
     const todoButtonsContainer = document.createElement("div");

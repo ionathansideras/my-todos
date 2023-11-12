@@ -134,7 +134,7 @@ hr {
   display: flex;
   flex-direction: column;
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: -45px;
   cursor: pointer;
   padding: 10px 15px;
@@ -151,22 +151,6 @@ hr {
   transition: 0.4s;
 }
 
-.menu-toggle:hover .bar {
-  background-color: #3192e1;
-}
-
-.menu-toggle:hover .bar:nth-child(1) {
-  transform: rotate(-45deg) translate(-5px, 7.6px);
-}
-
-.menu-toggle:hover .bar:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-toggle:hover .bar:nth-child(3) {
-  transform: rotate(45deg) translate(-5px, -7.6px);
-}
-
 .menu-toggle.menu-open .bar:nth-child(1) {
   transform: rotate(-45deg) translate(-5px, 7.6px);
   background-color: #3192e1;
@@ -179,4 +163,10 @@ hr {
 .menu-toggle.menu-open .bar:nth-child(3) {
   transform: rotate(45deg) translate(-5px, -7.6px);
   background-color: #3192e1;
+}
+
+.project-range {
+  position: absolute;
+  top: 95px;
+  right: 95px;
 }

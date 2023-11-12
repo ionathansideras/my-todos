@@ -7,17 +7,29 @@ export function validateProject(e) {
   const regex = /\S/;
 
   // Check if the input value contains any non-whitespace character
-  if (!regex.test(e.target.value)) {
+  if (!regex.test(e.value) || e.value.length > 20) {
     // Set outline color to red if validation fails
-    e.target.style.outlineColor = "red";
-
+    e.style.outlineColor = "red";
+    document.querySelector(".project-range").style.color = "rgb(255, 70, 70)";
+    document.querySelector(
+      ".project-range"
+    ).textContent = `${e.value.length} / 20`;
     // Set projectFlag to false to indicate invalid input
     setProjectFlag(false);
   } else {
     // Set outline color to green if validation passes
-    e.target.style.outlineColor = "green";
-
+    e.style.outlineColor = "rgb(70, 255, 70)";
+    document.querySelector(".project-range").style.color = "rgb(70, 255, 70)";
+    document.querySelector(
+      ".project-range"
+    ).textContent = `${e.value.length} / 20`;
     // Set projectFlag to true to indicate valid input
     setProjectFlag(true);
+  }
+
+  if (e.value.length === 0) {
+    document.querySelector(".project-range").style = "visibility: hidden;";
+  } else {
+    document.querySelector(".project-range").style = "visibility: visible;";
   }
 }
