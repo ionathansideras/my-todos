@@ -90,6 +90,7 @@ export function renderTodo() {
     // Create the span for priority color
     const priorityColor = document.createElement("span");
     const priorityClass = todo.priority.toLowerCase().replace(" ", "-");
+    priorityColor.classList.add("todo-priority");
     priorityColor.classList.add(priorityClass);
 
     // Add the edit icon to the edit button
