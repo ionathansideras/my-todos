@@ -10,8 +10,7 @@
     "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "cypress:open": "cypress open",
-    "test": "vitest"
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "cypress": "^13.5.0",
