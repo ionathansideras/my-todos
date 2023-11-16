@@ -34,8 +34,11 @@ export function setEditIds(data) {
 
 // Flag to check if the project input is valid
 let projectFlag = false;
+// flags to check if the todo input name is valid
 let todoNameFlag = false;
+// flags to check if the todo input details is valid
 let todoDetailsFlag = false;
+
 // Get projects array from local storage and assign it to the projects variable
 getLocalStorage();
 renderProjectsDom();
