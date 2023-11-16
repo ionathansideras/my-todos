@@ -1,5 +1,4 @@
 import { getProjects } from "../main";
-import { renderProjectsDom } from "../helpers/renderProjectDom";
 // this file contains functions to manage local storage
 export function getLocalStorage() {
   const projects = getProjects();

@@ -44,6 +44,10 @@ export function getProjects() {
   return projects;
 }
 
+export function sup() {
+  return "sup";
+}
+
 // Setter for projects array
 export function setProjects(data) {
   projects = data;
