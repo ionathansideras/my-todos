@@ -1,81 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Effortlessly manage your tasks and boost productivity with My Todo's - Your personalized Todo app. Create projects, organize priorities, and stay on top of your to-do list."
-    />
-    <title>My Todo's</title>
-    <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEyklEQVR4nO2b3U/bVhTA89jnaU/7AybtT+ikttoeplbbiummlb5W2sukPlAxmlBa0OikTVGhH3wWSpwVSuhogABpSKChSymDkKgZUSlhiLasJHYKDSEB++lMTmRqEsexnYsTnBzpvDjR9f39fO/xPZGi0ZSiFKUQEzXl5NdajPhPh5FQ0FlGrNVg5CkN6tCVEWt5hxOZWox4g14Aln8wKVkSgDp0KYb1VbsFlYqvAH0BQJcEVB2SFdBctwtWUzztOu2ukJ0FuQIm2zsh+OhbIG2n9jI8WQFRchFisRhY++PqFhBMgz8LUeJFAj4aDkBLvcprAJkBfju8BOHH59RfBEkBeOZ6rjXg0AjY9N1ILntyMVED2OtFI4BkJDxv2gfPJ0B1WyCYUgS5GbKeVr+AibYuXgnMtYm2u+oXoM9jlgRgpRUApS2AFWgNaM5TM/Sy98THTBZlM7Tcd3x0wXgUmPzXdMIkGxychiOUF+84TM3QX7d+ggX8KCc/B/+Drz6SDE95jJ9RHoOf9uJphgu1GUqHT64CyQKo58ZPKQ++wcBLFYC6GRIrYPjaHVgd+CJNALMdJD992os/ZOGlCkDdDIkRwMCz91l9+OUefMB0zCkZngnKi0fkClC6GbK34mnHb2YlBEzH5cEzwYUXKyAfzRAffDJP1mlyCVqGAKWboX/6fuaFt1zryP0gRMsQ0Fgdh9YrmzmDtdS+h9XxUaA8xn1zYPP9tAmC9szwSE6CtEQBQ7cCsD3bm/jua4cFmmsjsgXMP3DxgrO55RKGV1zAQOMK7KY8LZ/ZKQv+pja6J1IKvLe7Em0zRIsU0PP7GsTcPWkTfft4SJYAW7tfMvyWqwraLywpL6C7IQRbM/d5J+s2TcsSsDYxzDve6zF++KirKvH5un0ArnwXUk5A29UN2HjazzvZ3bnbELaXpbwFurLC478GecdbsuCC8GyON00rI6Dh3FsITpl5J0t5OmFjokLWOcDDU/zEwjO54/4DGn9cOVgBV78PwfIw/zKlvQbYdJ7PeBgSgr+h204rfpngmfe/f2iSdw4rI0NQU06gF1B/dh1qz4TA328VKFKVGeGz9gLzlSnbSA+RJxfgneOHfWM4WvHkWeFyBCIZ6o+5YR69gFfWQVgZGRR8P4fHT+cg4CJnG7Vxxu2G7enLiZrCwrPJFFreBzHTC3FP1ydIBdBZMu6+JwifbQs0XorByxEHBCw4xGevp40fm8PBfscH16s//Kq0PGYTmJPBrKiA4JQ552aIbWxiMw0Z7xOaMsMT4zy8sDiyz8tjqFdMwGzfs5yaIW5XF7afgZ25m5Luj1wCLeEmO+570FH3DmlLGx7/Bl7ZEAhIboffDlSArWMBKTy32o+2LEJsrkd5CbTIgd39Tw8Mnk3myL3uHFR2O9AiBgy7/kxUb7kCxMDvvSWq42Dv9CVabb7mC7kEWsRgjk6fbHg+AZnghfJ2TRRm7z9DL4EWMVDXLwQyAXLguTmm/1uSBCQCmqrlL3/UyfQpUiQgEaAvAHCuACkSVCtAJ1KCqgXoMBIoD37pwAXoUm5aSMkwCEkoCgFCEjRqFqBN+dMUnwTVCtBixBttOXEylSdVAhIBmkMWXAlFKYArQVOsApjI6ZeiUmjUFf8DOY5V2RpRseAAAAAASUVORK5CYII=" type="theme-icon" />
-    <script type="module" crossorigin src="/my-todos/assets/index-907035ed.js"></script>
-    <link rel="stylesheet" href="/my-todos/assets/index-ff5cb8f9.css">
-  </head>
-  <body>
-    <header>
-      <button class="open-todo-form">Add Todo +</button>
-    </header>
-    <div class="cover"></div>
-    <aside class="aside">
-      <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <h1>Add Your Project!</h1>
-      <form class="project-form">
-        <input
-          class="project-input"
-          type="text"
-          placeholder="Project name..."
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Effortlessly manage your tasks and boost productivity with My Todo's - Your personalized Todo app. Create projects, organize priorities, and stay on top of your to-do list."
         />
-        <span class="project-range"></span>
-        <button class="project-add" type="submit">Add</button>
-      </form>
-      <hr />
-      <h1 class="project-title">Choose your Project</h1>
-      <nav class="projects"></nav>
-    </aside>
-    <main></main>
-    <form class="todo-form">
-      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD6klEQVR4nO2YS4gcZRDHO6j4xMfFJJpMd9XMxhjEJ3hR8OTj5BNF8CYKHoN4EMEsRDQzVb3RgEhC1Iv4igdB0Jt40EgElfggsomYbKarekfyUBMxCYkt1RtlZ9NfT/dOy85q/2EuQ3fV9+vvq//31ed5tWrV+v8KSL9Gkm996i3zFrOQ9RtkTZD0h0UNgxxfDizfn4aZXNmZusJbrMIaZkSF9cyMqHzqLTMXy3OzYKJ7HZA+iSxvmH0jiSLrH0B6DEh65oZA+lZA+pRP0fVekiwZGZixjdMIpG0k2Zf+X+4nQEJ+KKsXFAZYDyDLqb7BkR5Glleaodzrb4iD5eNyQWvT7nNngOMHkXQrkBzpB5JTSPIecnzNgsH8/bPlg6TPtjYduHjQ+/YMkr4AJCcygN79V2fotvHkbGRdB6E8kgUThHJn2ZjNjtxoy2vukgOrqY48YzkrhYAwWoUkO2aWjpzMhJnncabBMSDrVFYNAemXQN1rK4FA1ieQ5Gh/HVQLA+34ZmA97oA5BqE8Nm+Am7Yk5yDpq07HITmJJLdUBkPyXJ7DAekWM41SQRsbpi4Dko8HWOeh2YU9LIzlRJZfcnOSfmrPFQrYandXIMuuQXsAsGye++5cGGB9B0kPAstvQPp+0ImuysuNeSvgn5mR7waexrEtDWD5schmFoTR3UWtefYsNsNopTM/6/2FNlKSn+yDZwYZm9h/pT1QeFduS8M1oHwY2eYE6XTHCucnnYSXppeeEQRYPy8chDXxx/ee5xpQHgyQ/Op6Z83LvYvKjAFIt58JQrq9TBBL6hpQQHKHC8aONa73lnJ84dAgp5NOFg3Sol7TNSAgfR060aNZMED6tuu9FvWaJSD2NDb+vDwzkBVi4Tohuc81IHMVZIkzYXKsGUgfKAYiuwY6lxW9WVyBYtuaF8e+FrK+BqHcXhQGWDYXyLvTutZciL4NkfWzAQEP+y/uvdQroTwYbB+6ZNCGCCQflc3p2XHAjgW5gVnWlwqaA4Ok4znL+E9r3rxtyVnefBWQPJ72GpkgetwOfMPCNEnvch0akfV35OhhrwrZURpYv3J8rX3WCQ4F4y7qLypvsqzJsWbHMTvSCqMbKoMhOYokT1feWPUlD2U1kn6QUYgnkPT5Iq1uWthZLQCndfdh3nmscmEot1pSK8Q5QEfsFBtw/JBdOJhprJjYf37A6jdJ7jHbTt2p4uZsaPltvRpYO0AaFd2VZ5nFbgMcGZhUSbLELt3s8g1Z30w3LpLp9ILO3I21CySfpDNCsjariP2RgalAWN81j6iwnpkRFf6XZsbvd7Od3mKWPwNjlr5jocdSq1Ytb+H0F6wlYv9PS45uAAAAAElFTkSuQmCC" alt="hide" class="hide-todo-form" />
-      <label for="todo-name-input">Add a new todo</label>
-      <input
-        id="todo-name-input"
-        type="text"
-        placeholder="What needs to be done?"
-      />
-      <span class="name-range"></span>
-      <label for="todo-details-input">Additional Details</label>
-      <textarea
-        id="todo-details-input"
-        placeholder="Add any additional details here..."
-      ></textarea>
-      <span class="details-range"></span>
-      <div class="todo-form-end">
-        <div>
-          <label for="todo-deadline-input">Deadline</label>
-          <input id="todo-deadline-input" type="date" />
-        </div>
-        <div>
-          <label for="todo-priority-input">Priority</label>
-          <select id="todo-priority-input">
-            <option class="todo-priority-input" value="Not Important">
-              Not Important
-            </option>
-            <option class="todo-priority-input" value="Important">
-              Important
-            </option>
-            <option class="todo-priority-input" value="Very Important">
-              Very Important
-            </option>
-          </select>
-        </div>
-      </div>
-      <button class="add-todo" type="submit">Add</button>
-    </form>
-    <h1 class="title"></h1>
-    
-  </body>
+        <meta
+            name="keywords"
+            content="Todo, Productivity, Tasks, Priorities, Projects, Personalized"
+        />
+        <title>My Todo's - Boost Your Productivity</title>
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEyklEQVR4nO2b3U/bVhTA89jnaU/7AybtT+ikttoeplbbiummlb5W2sukPlAxmlBa0OikTVGhH3wWSpwVSuhogABpSKChSymDkKgZUSlhiLasJHYKDSEB++lMTmRqEsexnYsTnBzpvDjR9f39fO/xPZGi0ZSiFKUQEzXl5NdajPhPh5FQ0FlGrNVg5CkN6tCVEWt5hxOZWox4g14Aln8wKVkSgDp0KYb1VbsFlYqvAH0BQJcEVB2SFdBctwtWUzztOu2ukJ0FuQIm2zsh+OhbIG2n9jI8WQFRchFisRhY++PqFhBMgz8LUeJFAj4aDkBLvcprAJkBfju8BOHH59RfBEkBeOZ6rjXg0AjY9N1ILntyMVED2OtFI4BkJDxv2gfPJ0B1WyCYUgS5GbKeVr+AibYuXgnMtYm2u+oXoM9jlgRgpRUApS2AFWgNaM5TM/Sy98THTBZlM7Tcd3x0wXgUmPzXdMIkGxychiOUF+84TM3QX7d+ggX8KCc/B/+Drz6SDE95jJ9RHoOf9uJphgu1GUqHT64CyQKo58ZPKQ++wcBLFYC6GRIrYPjaHVgd+CJNALMdJD992os/ZOGlCkDdDIkRwMCz91l9+OUefMB0zCkZngnKi0fkClC6GbK34mnHb2YlBEzH5cEzwYUXKyAfzRAffDJP1mlyCVqGAKWboX/6fuaFt1zryP0gRMsQ0Fgdh9YrmzmDtdS+h9XxUaA8xn1zYPP9tAmC9szwSE6CtEQBQ7cCsD3bm/jua4cFmmsjsgXMP3DxgrO55RKGV1zAQOMK7KY8LZ/ZKQv+pja6J1IKvLe7Em0zRIsU0PP7GsTcPWkTfft4SJYAW7tfMvyWqwraLywpL6C7IQRbM/d5J+s2TcsSsDYxzDve6zF++KirKvH5un0ArnwXUk5A29UN2HjazzvZ3bnbELaXpbwFurLC478GecdbsuCC8GyON00rI6Dh3FsITpl5J0t5OmFjokLWOcDDU/zEwjO54/4DGn9cOVgBV78PwfIw/zKlvQbYdJ7PeBgSgr+h204rfpngmfe/f2iSdw4rI0NQU06gF1B/dh1qz4TA328VKFKVGeGz9gLzlSnbSA+RJxfgneOHfWM4WvHkWeFyBCIZ6o+5YR69gFfWQVgZGRR8P4fHT+cg4CJnG7Vxxu2G7enLiZrCwrPJFFreBzHTC3FP1ydIBdBZMu6+JwifbQs0XorByxEHBCw4xGevp40fm8PBfscH16s//Kq0PGYTmJPBrKiA4JQ552aIbWxiMw0Z7xOaMsMT4zy8sDiyz8tjqFdMwGzfs5yaIW5XF7afgZ25m5Luj1wCLeEmO+570FH3DmlLGx7/Bl7ZEAhIboffDlSArWMBKTy32o+2LEJsrkd5CbTIgd39Tw8Mnk3myL3uHFR2O9AiBgy7/kxUb7kCxMDvvSWq42Dv9CVabb7mC7kEWsRgjk6fbHg+AZnghfJ2TRRm7z9DL4EWMVDXLwQyAXLguTmm/1uSBCQCmqrlL3/UyfQpUiQgEaAvAHCuACkSVCtAJ1KCqgXoMBIoD37pwAXoUm5aSMkwCEkoCgFCEjRqFqBN+dMUnwTVCtBixBttOXEylSdVAhIBmkMWXAlFKYArQVOsApjI6ZeiUmjUFf8DOY5V2RpRseAAAAAASUVORK5CYII=" type="theme-icon" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:title" content="My Todo's" />
+        <meta
+            property="og:description"
+            content="Effortlessly manage your tasks and boost productivity with My Todo's - Your personalized Todo app. Create projects, organize priorities, and stay on top of your to-do list."
+        />
+        <meta property="og:image" content="/imgs/todo-icon.png" />
+      <script type="module" crossorigin src="/my-todos/assets/index-ff616fea.js"></script>
+      <link rel="stylesheet" href="/my-todos/assets/index-ff5cb8f9.css">
+    </head>
+    <body>
+        <header>
+            <button class="open-todo-form">Add Todo +</button>
+        </header>
+        <div class="cover"></div>
+        <aside class="aside">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <h1>Add Your Project!</h1>
+            <form class="project-form">
+                <input
+                    class="project-input"
+                    type="text"
+                    placeholder="Project name..."
+                />
+                <span class="project-range"></span>
+                <button class="project-add" type="submit">Add</button>
+            </form>
+            <hr />
+            <h1 class="project-title">Choose your Project</h1>
+            <nav class="projects"></nav>
+        </aside>
+        <main></main>
+        <form class="todo-form">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAD6klEQVR4nO2YS4gcZRDHO6j4xMfFJJpMd9XMxhjEJ3hR8OTj5BNF8CYKHoN4EMEsRDQzVb3RgEhC1Iv4igdB0Jt40EgElfggsomYbKarekfyUBMxCYkt1RtlZ9NfT/dOy85q/2EuQ3fV9+vvq//31ed5tWrV+v8KSL9Gkm996i3zFrOQ9RtkTZD0h0UNgxxfDizfn4aZXNmZusJbrMIaZkSF9cyMqHzqLTMXy3OzYKJ7HZA+iSxvmH0jiSLrH0B6DEh65oZA+lZA+pRP0fVekiwZGZixjdMIpG0k2Zf+X+4nQEJ+KKsXFAZYDyDLqb7BkR5Glleaodzrb4iD5eNyQWvT7nNngOMHkXQrkBzpB5JTSPIecnzNgsH8/bPlg6TPtjYduHjQ+/YMkr4AJCcygN79V2fotvHkbGRdB6E8kgUThHJn2ZjNjtxoy2vukgOrqY48YzkrhYAwWoUkO2aWjpzMhJnncabBMSDrVFYNAemXQN1rK4FA1ieQ5Gh/HVQLA+34ZmA97oA5BqE8Nm+Am7Yk5yDpq07HITmJJLdUBkPyXJ7DAekWM41SQRsbpi4Dko8HWOeh2YU9LIzlRJZfcnOSfmrPFQrYandXIMuuQXsAsGye++5cGGB9B0kPAstvQPp+0ImuysuNeSvgn5mR7waexrEtDWD5schmFoTR3UWtefYsNsNopTM/6/2FNlKSn+yDZwYZm9h/pT1QeFduS8M1oHwY2eYE6XTHCucnnYSXppeeEQRYPy8chDXxx/ee5xpQHgyQ/Op6Z83LvYvKjAFIt58JQrq9TBBL6hpQQHKHC8aONa73lnJ84dAgp5NOFg3Sol7TNSAgfR060aNZMED6tuu9FvWaJSD2NDb+vDwzkBVi4Tohuc81IHMVZIkzYXKsGUgfKAYiuwY6lxW9WVyBYtuaF8e+FrK+BqHcXhQGWDYXyLvTutZciL4NkfWzAQEP+y/uvdQroTwYbB+6ZNCGCCQflc3p2XHAjgW5gVnWlwqaA4Ok4znL+E9r3rxtyVnefBWQPJ72GpkgetwOfMPCNEnvch0akfV35OhhrwrZURpYv3J8rX3WCQ4F4y7qLypvsqzJsWbHMTvSCqMbKoMhOYokT1feWPUlD2U1kn6QUYgnkPT5Iq1uWthZLQCndfdh3nmscmEot1pSK8Q5QEfsFBtw/JBdOJhprJjYf37A6jdJ7jHbTt2p4uZsaPltvRpYO0AaFd2VZ5nFbgMcGZhUSbLELt3s8g1Z30w3LpLp9ILO3I21CySfpDNCsjariP2RgalAWN81j6iwnpkRFf6XZsbvd7Od3mKWPwNjlr5jocdSq1Ytb+H0F6wlYv9PS45uAAAAAElFTkSuQmCC" alt="hide" class="hide-todo-form" />
+            <label for="todo-name-input">Add a new todo</label>
+            <input
+                id="todo-name-input"
+                type="text"
+                placeholder="What needs to be done?"
+            />
+            <span class="name-range"></span>
+            <label for="todo-details-input">Additional Details</label>
+            <textarea
+                id="todo-details-input"
+                placeholder="Add any additional details here..."
+            ></textarea>
+            <span class="details-range"></span>
+            <div class="todo-form-end">
+                <div>
+                    <label for="todo-deadline-input">Deadline</label>
+                    <input id="todo-deadline-input" type="date" />
+                </div>
+                <div>
+                    <label for="todo-priority-input">Priority</label>
+                    <select id="todo-priority-input">
+                        <option
+                            class="todo-priority-input"
+                            value="Not Important"
+                        >
+                            Not Important
+                        </option>
+                        <option class="todo-priority-input" value="Important">
+                            Important
+                        </option>
+                        <option
+                            class="todo-priority-input"
+                            value="Very Important"
+                        >
+                            Very Important
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <button class="add-todo" type="submit">Add</button>
+        </form>
+        <h1 class="title"></h1>
+        
+    </body>
 </html>
