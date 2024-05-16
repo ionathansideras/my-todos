@@ -1,79 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Effortlessly manage your tasks and boost productivity with My Todo's - Your personalized Todo app. Create projects, organize priorities, and stay on top of your to-do list."
-    />
-    <title>My Todo's</title>
-    <link rel="icon" href="/imgs/todo-icon.png" type="theme-icon" />
-  </head>
-  <body>
-    <header>
-      <button class="open-todo-form">Add Todo +</button>
-    </header>
-    <div class="cover"></div>
-    <aside class="aside">
-      <div class="menu-toggle" id="mobile-menu">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-      <h1>Add Your Project!</h1>
-      <form class="project-form">
-        <input
-          class="project-input"
-          type="text"
-          placeholder="Project name..."
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Effortlessly manage your tasks and boost productivity with My Todo's - Your personalized Todo app. Create projects, organize priorities, and stay on top of your to-do list."
         />
-        <span class="project-range"></span>
-        <button class="project-add" type="submit">Add</button>
-      </form>
-      <hr />
-      <h1 class="project-title">Choose your Project</h1>
-      <nav class="projects"></nav>
-    </aside>
-    <main></main>
-    <form class="todo-form">
-      <img src="/imgs/hide.png" alt="hide" class="hide-todo-form" />
-      <label for="todo-name-input">Add a new todo</label>
-      <input
-        id="todo-name-input"
-        type="text"
-        placeholder="What needs to be done?"
-      />
-      <span class="name-range"></span>
-      <label for="todo-details-input">Additional Details</label>
-      <textarea
-        id="todo-details-input"
-        placeholder="Add any additional details here..."
-      ></textarea>
-      <span class="details-range"></span>
-      <div class="todo-form-end">
-        <div>
-          <label for="todo-deadline-input">Deadline</label>
-          <input id="todo-deadline-input" type="date" />
-        </div>
-        <div>
-          <label for="todo-priority-input">Priority</label>
-          <select id="todo-priority-input">
-            <option class="todo-priority-input" value="Not Important">
-              Not Important
-            </option>
-            <option class="todo-priority-input" value="Important">
-              Important
-            </option>
-            <option class="todo-priority-input" value="Very Important">
-              Very Important
-            </option>
-          </select>
-        </div>
-      </div>
-      <button class="add-todo" type="submit">Add</button>
-    </form>
-    <h1 class="title"></h1>
-    <script type="module" src="/main.js"></script>
-  </body>
+        <meta
+            name="keywords"
+            content="Todo, Productivity, Tasks, Priorities, Projects, Personalized"
+        />
+        <title>My Todo's - Boost Your Productivity</title>
+        <link rel="icon" href="/imgs/todo-icon.png" type="theme-icon" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://yourwebsite.com/" />
+        <meta property="og:title" content="My Todo's" />
+        <meta
+            property="og:description"
+            content="Effortlessly manage your tasks and boost productivity with My Todo's - Your personalized Todo app. Create projects, organize priorities, and stay on top of your to-do list."
+        />
+        <meta property="og:image" content="/imgs/todo-icon.png" />
+    </head>
+    <body>
+        <header>
+            <button class="open-todo-form">Add Todo +</button>
+        </header>
+        <div class="cover"></div>
+        <aside class="aside">
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <h1>Add Your Project!</h1>
+            <form class="project-form">
+                <input
+                    class="project-input"
+                    type="text"
+                    placeholder="Project name..."
+                />
+                <span class="project-range"></span>
+                <button class="project-add" type="submit">Add</button>
+            </form>
+            <hr />
+            <h1 class="project-title">Choose your Project</h1>
+            <nav class="projects"></nav>
+        </aside>
+        <main></main>
+        <form class="todo-form">
+            <img src="/imgs/hide.png" alt="hide" class="hide-todo-form" />
+            <label for="todo-name-input">Add a new todo</label>
+            <input
+                id="todo-name-input"
+                type="text"
+                placeholder="What needs to be done?"
+            />
+            <span class="name-range"></span>
+            <label for="todo-details-input">Additional Details</label>
+            <textarea
+                id="todo-details-input"
+                placeholder="Add any additional details here..."
+            ></textarea>
+            <span class="details-range"></span>
+            <div class="todo-form-end">
+                <div>
+                    <label for="todo-deadline-input">Deadline</label>
+                    <input id="todo-deadline-input" type="date" />
+                </div>
+                <div>
+                    <label for="todo-priority-input">Priority</label>
+                    <select id="todo-priority-input">
+                        <option
+                            class="todo-priority-input"
+                            value="Not Important"
+                        >
+                            Not Important
+                        </option>
+                        <option class="todo-priority-input" value="Important">
+                            Important
+                        </option>
+                        <option
+                            class="todo-priority-input"
+                            value="Very Important"
+                        >
+                            Very Important
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <button class="add-todo" type="submit">Add</button>
+        </form>
+        <h1 class="title"></h1>
+        <script type="module" src="/main.js"></script>
+    </body>
 </html>
